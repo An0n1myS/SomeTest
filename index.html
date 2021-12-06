@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+     <div class="levels">
+            
+            <div class="radioBtn">
+                <p>Сложность</p>
+                <p><input name="complicity" type="radio" id = "easy" value="easy"> Лёгко</p>
+                <p><input name="complicity" type="radio" id = "medium" value="medium"> Средне</p>
+                <p><input name="complicity" type="radio" id = "hard" value="hard" checked> Тяжко</p>
+            </div>
+            <div class="buttonStart">
+                <button id = "startbutton" onclick="startTest()">Начать</button>
+            </div>
+        </div>
+    <div class="topContainer">
+        <div class="canvas">
+            <canvas id = "canvas"></canvas>
+        </div>
+
+       
+
+        <div class="options">
+            <div class = "translation">
+                <input id = "translation" type = "text" size="40">
+            </div>
+            <div class="submit" onclick="SubmitAndChange()">
+                <button id = "submitButton">Ответить</button>
+            </div>
+        </div>
+    </div>
+    <div class="tracker">
+        <p><span id = "currentPosition">0</span>/10</p>
+        <p>Правильно: <span id = "correctAnsw"></span></p>
+        <p>Не правильно: <span id = "incorrectAnsw"></span></p>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</body>
+</html>
